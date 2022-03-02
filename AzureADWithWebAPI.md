@@ -19,7 +19,7 @@
    
    ``` 
    "AzureAd": {
-    "Instance": "",
+    "Instance": "https://login.microsoftonline.com/",
     "ClientId": "", //Application (client) ID
     "TenantId": "",
     "Audience": "api://, //Application (client) ID
