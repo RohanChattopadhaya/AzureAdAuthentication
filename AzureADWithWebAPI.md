@@ -65,11 +65,13 @@
     - In Web API app registration's Expose API section add Web app client ID of Web App Regitration.
        ![Capture4](https://user-images.githubusercontent.com/40242212/141675309-dd3c2cd3-4440-423f-a481-9c2d8475f528.png)
        
-    - Need to call OAuth 2.0 token endpoint (v1) (We can find in Endpoint section of Azure AD) from Postman or Web APP using clientId,Client Secret(Client secret can be created) and resource(Scope of Web Api what is created before -> Ex - api://ClientIDWebAPI).
+    - Need to call OAuth 2.0 token endpoint (v1) (We can find in Endpoint section of Azure AD) from Postman or Web APP using grant_type(client_credentials), clientId,Client Secret(Client secret can be created) and resource(Scope of Web Api what is created before -> Ex - api://ClientIDWebAPI).
         ```
         https://login.microsoftonline.com/{tenantID}/oauth2/token
         ```        
-        This will fetch bearer token which will be used in Header as 'Authorization' to call web API.
+        This will fetch bearer token which will be used in Header as 'Authorization' to call web API. 
+        
+        *** In case of web application we can use scope to get the access token using ITokenAcquisition.Also need to add services for scope in configure service method of startup class.
         
         
         
