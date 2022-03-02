@@ -71,7 +71,7 @@
         ```        
         This will fetch bearer token which will be used in Header as 'Authorization' to call web API. 
         
-        *** In case of web application we can use scope to get the access token using ITokenAcquisition.Also need to add services for scope in configure service method of startup class.
+        *** In case of web application we can use scope(Expose api one) to get the access token using ITokenAcquisition.Also need to add services for scope in configure service method of startup class.
         
         
         
